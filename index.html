@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Library Search Lite - BMIET</title>
+    <meta
+      name="description"
+      content="A modern, animated library search interface."
+    />
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVHZ6Krk1V9CENk8KzPTCsyyDowQrH6G7uuQ&s"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <img
+        src="https://cdn.svgator.com/images/2023/06/spiral-css-preloader.gif"
+        alt="Loading..."
+      />
+      <div>Welcome to the BMIET Campus</div>
+    </div>
+    <!-- Toast Notification -->
+    <div id="toast" role="alert" aria-live="assertive"></div>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#">
+          <img
+            src="logo2-removebg-preview.png"
+            alt="Library Logo"
+            class="logo"
+          />
+          <span>Library Search Lite</span>
+        </a>
+        <nav class="main-nav">
+          <ul id="navListDesktop" class="nav-list">
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#books">All Books</a></li>
+            <li><a href="#bookmarks">My Bookmark</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button
+            id="toggle-btn"
+            class="theme-toggle"
+            title="Toggle dark/light mode"
+          >
+            🌞
+          </button>
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="navListMobile"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav-container">
+        <ul id="navListMobile" class="nav-list-mobile">
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#books">All Books</a></li>
+          <li><a href="#bookmarks">My List</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="visually-hidden">Library Search Lite</h1>
+
+      <!-- Dashboard -->
+      <section
+        id="dashboard"
+        class="content-section"
+        aria-labelledby="dashboard-title"
+      >
+        <div class="section-head">
+          <h2 id="dashboard-title">My Dashboard</h2>
+        </div>
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <h3>Want to Read</h3>
+            <p id="bookmarked-stat">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Currently Reading</h3>
+            <p id="reading-stat">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Books Read</h3>
+            <p id="read-stat">0</p>
+          </div>
+          <div class="chart-card">
+            <h3>My Library Stats</h3>
+            <div class="chart-container">
+              <canvas id="statusChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search -->
+      <section
+        id="search"
+        class="search-panel content-section"
+        aria-labelledby="search-title"
+      >
+        <h2 id="search-title">Find Your Next Read</h2>
+        <!-- <div class="controls">
+          <label for="q" class="visually-hidden"
+            >Search by title, author or tag</label
+          >
+          <input
+            id="q"
+            type="search"
+            placeholder="e.g., 'Atomic Habits' or 'Self-Help'"
+          />
+
+          <label for="ratingFilter" class="visually-hidden"
+            >Filter by rating</label
+          >
+          <select
+            id="ratingFilter"
+            class="rating-filter"
+            aria-label="Filter by rating"
+          >
+            <option value="0">All Ratings</option>
+            <option value="1">Rating ≥ 1</option>
+            <option value="2">Rating ≥ 2</option>
+            <option value="3">Rating ≥ 3</option>
+            <option value="4">Rating ≥ 4</option>
+            <option value="5">Rating = 5</option>
+          </select>
+
+          <button id="clearBtn" class="btn">Clear</button>
+        </div> -->
+        <div class="controls">
+          <label for="q" class="visually-hidden">Search Books</label>
+          <input
+            id="q"
+            type="search"
+            placeholder="Search title, author or tag"
+          />
+
+          <select id="ratingFilter" aria-label="Filter by rating">
+            <option value="0">All Ratings</option>
+            <option value="1">⭐ 1 & above</option>
+            <option value="2">⭐⭐ 2 & above</option>
+            <option value="3">⭐⭐⭐ 3 & above</option>
+            <option value="4">⭐⭐⭐⭐ 4 & above</option>
+          </select>
+
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+      </section>
+
+      <!-- All Books -->
+      <section id="books" class="content-section" aria-labelledby="books-title">
+        <div class="section-head">
+          <h2 id="books-title">All Books</h2>
+          <p id="stats" class="stats" role="status" aria-live="polite"></p>
+        </div>
+        <ul id="bookList" class="card-list" aria-live="polite"></ul>
+      </section>
+
+      <!-- Bookmarks -->
+      <section
+        id="bookmarks"
+        class="content-section"
+        aria-labelledby="bookmarks-title"
+      >
+        <div class="section-head">
+          <h2 id="bookmarks-title">My "Want to Read" List</h2>
+          <p
+            id="bookmark-stats"
+            class="stats"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+        <ul id="bookmarkList" class="card-list" aria-live="polite"></ul>
+      </section>
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="content-section about-section"
+        aria-labelledby="about-title"
+      >
+        <div class="section-head">
+          <h2 id="about-title">About the Project</h2>
+        </div>
+
+        <p>
+          <strong
+            >Web Track — One-Page Project (Vibe Coding @ BMIET • UG)</strong
+          ><br /><br />
+          The goal of this task was to
+          <strong>build a small, single-page website</strong> around a simple
+          campus theme — focusing on clarity first, then adding smooth
+          interactions. Our team selected
+          <strong>Option B — Library Search Lite</strong>, a mini book browser
+          that allows users to search, filter by rating, view book details, and
+          bookmark their favorites — all stored locally using
+          <code>localStorage</code>.
+        </p>
+
+        <p>
+          <strong>Team ID:</strong> UU4529AG •
+          <strong>Team Name:</strong> Technocrat • <strong>Track:</strong> Web
+          (HTML/CSS/JS)<br />
+          <strong>Developed By:</strong> Himanshu Chaubey & Vishal Kumar Gupta
+        </p>
+      </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>© 2025 Vibe Coding @ BMIET • Web Track (Team Technocrat)</p>
+        <p class="footer-tagline">
+          Functionality • Code • Design • Presentation
+        </p>
+        <div class="footer-links">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#books">All Books</a>
+          <a href="#bookmarks">My Bookmark</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <main class="container">
+      <h1 class="visually-hidden">Library Search Lite</h1>
+
+      <section
+        id="dashboard"
+        class="content-section"
+        aria-labelledby="dashboard-title"
+      >
+        <div class="section-head">
+          <h2 id="dashboard-title">My Dashboard</h2>
+        </div>
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <h3>Want to Read</h3>
+            <p id="bookmarked-stat">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Currently Reading</h3>
+            <p id="reading-stat">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Books Read</h3>
+            <p id="read-stat">0</p>
+          </div>
+          <div class="chart-card">
+            <h3>My Library Stats</h3>
+            <div class="chart-container">
+              <canvas id="statusChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="search"
+        class="search-panel content-section"
+        aria-labelledby="search-title"
+      >
+        <h2 id="search-title">Find Your Next Read</h2>
+        <div class="controls">
+          <label for="q" class="visually-hidden"
+            >Search by title, author or tag</label
+          >
+          <input
+            id="q"
+            type="search"
+            placeholder="e.g., 'Atomic Habits' or 'Self-Help'"
+          />
+
+          <label for="ratingFilter" class="visually-hidden"
+            >Filter by rating</label
+          >
+          <select
+            id="ratingFilter"
+            class="rating-filter"
+            aria-label="Filter by rating"
+          >
+            <option value="0">All Ratings</option>
+            <option value="1">Rating ≥ 1</option>
+            <option value="2">Rating ≥ 2</option>
+            <option value="3">Rating ≥ 3</option>
+            <option value="4">Rating ≥ 4</option>
+            <option value="5">Rating = 5</option>
+          </select>
+
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+      </section>
+
+      <section id="books" class="content-section" aria-labelledby="books-title">
+        <div class="section-head">
+          <h2 id="books-title">All Books</h2>
+          <p id="stats" class="stats" role="status" aria-live="polite"></p>
+        </div>
+        <ul id="bookList" class="card-list" aria-live="polite"></ul>
+      </section>
+
+      <section
+        id="bookmarks"
+        class="content-section"
+        aria-labelledby="bookmarks-title"
+      >
+        <div class="section-head">
+          <h2 id="bookmarks-title">My "Want to Read" List</h2>
+          <p
+            id="bookmark-stats"
+            class="stats"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+        <ul id="bookmarkList" class="card-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© 2025 BMIET • Vibe Coding</small>
+    </footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "b1",
+    "title": "Learning Python Fast",
+    "author": "A. Gupta",
+    "year": 2021,
+    "rating": 4.5,
+    "status": "Available",
+    "tags": ["python", "beginner"],
+    "description": "A quick and immersive guide to Python for beginners. Covers all the fundamental concepts with practical examples to get you coding immediately."
+  },
+  {
+    "id": "b2",
+    "title": "Accessible Web Design",
+    "author": "M. Rao",
+    "year": 2022,
+    "rating": 2.8,
+    "status": "Checked Out",
+    "tags": ["web", "a11y", "ui"],
+    "description": "Learn how to build beautiful websites that are usable by everyone, including people with disabilities. A crucial skill for modern web developers."
+  },
+  {
+    "id": "b3",
+    "title": "Data Structures in JS",
+    "author": "K. Singh",
+    "year": 2020,
+    "rating": 3.7,
+    "status": "Available",
+    "tags": ["javascript", "ds"],
+    "description": "An in-depth look at implementing common data structures like linked lists, stacks, queues, and trees using JavaScript."
+  },
+  {
+    "id": "b4",
+    "title": "Intro to Databases",
+    "author": "N. Sharma",
+    "year": 2019,
+    "rating": 4.4,
+    "status": "Available",
+    "tags": ["sql", "db"],
+    "description": "A comprehensive introduction to relational databases, SQL, and data modeling. Perfect for aspiring back-end developers."
+  },
+  {
+    "id": "b5",
+    "title": "Clean Frontend Architecture",
+    "author": "R. Iyer",
+    "year": 2023,
+    "rating": 4.9,
+    "status": "Available",
+    "tags": ["frontend", "architecture"],
+    "description": "Discover patterns and principles for writing scalable and maintainable frontend code. Essential for large-scale projects."
+  },
+  {
+    "id": "b6",
+    "title": "Machine Learning Notes",
+    "author": "S. Verma",
+    "year": 2018,
+    "rating": 2.2,
+    "status": "Checked Out",
+    "tags": ["ml", "notes"],
+    "description": "A concise collection of notes and code snippets covering the most important algorithms and concepts in Machine Learning."
+  },
+  {
+    "id": "b7",
+    "title": "Effective Git",
+    "author": "T. Mehta",
+    "year": 2024,
+    "rating": 4.6,
+    "status": "Available",
+    "tags": ["git", "version-control"],
+    "description": "Master version control with Git. This book goes beyond the basics to teach you workflows and advanced commands."
+  },
+  {
+    "id": "b8",
+    "title": "Design Systems 101",
+    "author": "P. Kaur",
+    "year": 2022,
+    "rating": 4.5,
+    "status": "Available",
+    "tags": ["design", "systems"],
+    "description": "Learn how to create and maintain a design system to ensure consistency and speed up development across teams."
+  },
+  {
+    "id": "b9",
+    "title": "Networking Basics",
+    "author": "H. Ali",
+    "year": 2017,
+    "rating": 4.1,
+    "status": "Available",
+    "tags": ["network", "basics"],
+    "description": "Understand the fundamentals of how the internet works, from IP addresses to DNS and HTTP. A must-read for any developer."
+  },
+  {
+    "id": "b10",
+    "title": "Practical Linux",
+    "author": "Z. Khan",
+    "year": 2020,
+    "rating": 3.3,
+    "status": "Available",
+    "tags": ["linux", "cli"],
+    "description": "Become proficient with the Linux command line. This book covers essential commands, shell scripting, and system administration."
+  }
+]
