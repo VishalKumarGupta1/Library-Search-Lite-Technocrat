@@ -4,8 +4,9 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-
 An interactive and personalized library portal designed to provide a seamless user experience on both mobile and desktop devices.
+
+🌐 **Live Demo**: [Library Search Lite - Technocrat](https://vishalkumargupta1.github.io/Library-Search-Lite-Technocrat/)  
 
 ---
 
@@ -24,6 +25,9 @@ An interactive and personalized library portal designed to provide a seamless us
 * 🔖 **Advanced Status Tracking**: Easily manage your reading list by setting a book's status to "Want to Read," "Currently Reading," or "Read."
 * 🌓 **Dark Mode Toggle**: A user-friendly switch for light and dark themes, with your preference saved in `localStorage`.
 * 🔍 **Dynamic Content Filtering**: An interactive search bar to instantly filter books by title, author, or tag.
+* ⭐ **Filter by Rating**: A New dropdown to filter books by rating (1–5 stars).
+* 📣 **Toast Notifications** – Real-time alerts when you Change book status
+* 🧑‍💻 **About Section**: Learn more about the project goals and development team.
 * ♿ **Core Web Accessibility**: Built with semantic HTML, `aria` attributes, a "skip to content" link, and visible focus states for keyboard navigation.
 
 ---
@@ -45,11 +49,11 @@ This project is built with static files and requires no build process.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/campus-connect.git](https://github.com/your-username/campus-connect.git)
+    git clone https://github.com/VishalKumarGupta1/Library-Search-Lite-Technocrat.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd campus-connect
+    cd Library-Search-Lite-Technocrat
     ```
 3.  **Open in your browser:**
     Simply open the `index.html` file in your web browser to run the application.
@@ -63,7 +67,7 @@ This project is built with static files and requires no build process.
 <img width="1891" height="854" alt="Screenshot 2025-10-05 060114" src="https://github.com/user-attachments/assets/a77c5cfe-ff95-43c3-bd32-d8a5549b8b8b" />
 <img width="1896" height="908" alt="Screenshot 2025-10-05 131048" src="https://github.com/user-attachments/assets/f4c3f821-612d-4780-8446-f4cfe7d9e7e6" />
 <img width="1890" height="851" alt="Screenshot 2025-10-05 060550" src="https://github.com/user-attachments/assets/13193fcf-fc8a-40f0-8aa0-c96e194bfdc2" />
-**In Light Mode**
+In Light Mode
 <img width="1897" height="912" alt="Screenshot 2025-10-05 131420" src="https://github.com/user-attachments/assets/b55a9e75-d5b1-429f-a0e0-282c879cc6bf" />
 
 ---
@@ -74,9 +78,10 @@ This project is built with static files and requires no build process.
 * **Advanced Filtering**: Add dropdowns to filter by genre, rating, or publication year.
 * **"Surprise Me!" Feature**: A button to suggest a random book to the user.
 * **Backend Integration**: Connect the site to a real backend to fetch dynamic data and handle user accounts.
+* 📱 **Progressive Web App (PWA)** – Offline access and installable app.
+* 🧠 **Genre & Year Filters** – Advanced multi-select filtering.
+* 🔔 **Smart Reminders** – Notify users about their reading progress.
 
 ---
 
-*This project was created ❤️ by [ Team Technocrat].*
-add in this that also in this add about section in which we describe about project and team info 
-and add notification wehn we perform au
+*Built with ❤️ by Team Technocrat — Innovating the digital library experience.*
