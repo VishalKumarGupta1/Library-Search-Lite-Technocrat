@@ -1,1 +1,25 @@
-we use a gif load to add in starting of this website link is 
+AI Tool Used
+Tool: Google Gemini
+
+## Areas of AI Assistance
+AI assistance was used in a supportive role for the following tasks during the project's development:
+
+1. Feature Ideation & Brainstorming:
+
+Used to brainstorm and explore potential new features to enhance the user experience, such as the concept of a personal dashboard and interactive card animations.
+
+2. Implementation Guidance:
+
+Consulted for technical guidance and syntax examples for specific complex features, including:
+
+The implementation of CSS 3D transforms for the card-flip effect.
+
+The initial setup and configuration for the Chart.js library.
+
+3. UI/UX Refinement:
+
+Used as a sounding board to refine the layout and styling, ensuring the design was compact, responsive, and user-friendly.
+
+4. Documentation:
+
+Received help in structuring and polishing the project's README.md file.
