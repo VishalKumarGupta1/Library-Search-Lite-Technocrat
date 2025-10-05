@@ -58,11 +58,13 @@ This project is built with static files and requires no build process.
 
 ## 📸 Snapshot
 
-<img width="1888" height="702" alt="Screenshot 2025-10-05 060032" src="https://github.com/user-attachments/assets/cf82e6ac-9cca-4c21-84d5-708e04d93562" />
+<img width="1698" height="718" alt="Screenshot 2025-10-05 131025" src="https://github.com/user-attachments/assets/9f6815ec-1bd2-4780-b78f-988a1d100b96" />
 <img width="1885" height="854" alt="Screenshot 2025-10-05 060056" src="https://github.com/user-attachments/assets/00306e6f-a25e-417a-8d6b-eb4ad9ab2871" />
 <img width="1891" height="854" alt="Screenshot 2025-10-05 060114" src="https://github.com/user-attachments/assets/a77c5cfe-ff95-43c3-bd32-d8a5549b8b8b" />
+<img width="1896" height="908" alt="Screenshot 2025-10-05 131048" src="https://github.com/user-attachments/assets/f4c3f821-612d-4780-8446-f4cfe7d9e7e6" />
 <img width="1890" height="851" alt="Screenshot 2025-10-05 060550" src="https://github.com/user-attachments/assets/13193fcf-fc8a-40f0-8aa0-c96e194bfdc2" />
-
+**In Light Mode**
+<img width="1897" height="912" alt="Screenshot 2025-10-05 131420" src="https://github.com/user-attachments/assets/b55a9e75-d5b1-429f-a0e0-282c879cc6bf" />
 
 ---
 
@@ -76,3 +78,5 @@ This project is built with static files and requires no build process.
 ---
 
 *This project was created ❤️ by [ Team Technocrat].*
+add in this that also in this add about section in which we describe about project and team info 
+and add notification wehn we perform au
