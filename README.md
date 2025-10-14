@@ -84,4 +84,13 @@ In Light Mode
 
 ---
 
-*Built with ❤️ by Team Technocrat — Innovating the digital library experience.*
+## 🙏 Acknowledgments
+
+Built with ❤️ by **Team Technocrat** — Innovating the digital library experience.
+
+👨‍💻 Contributors:  
+- [Vishal Kumar Gupta](https://github.com/VishalKumarGupta1)  
+- [Himanshu Chaubey](https://github.com/Himanshu-tech9140)
+
+---
+
